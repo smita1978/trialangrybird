@@ -5,12 +5,13 @@ var World=Matter.World;
 var Bodies=Matter.Bodies;
 var engine,world,ground,box1,bo2;
 var pig1,log1;
-var birde;
+var birde,plat;
 function setup() {
  var canvas= createCanvas(1200,800);
   engine=Engine.create();
   world=engine.world;
-  ground=new Ground();
+  plat=new Ground(150,300,300,170);
+  ground=new Ground(600,400,1200,800);
  
   box1=new Box (700,320,70,70);
   box2=new Box (920,320,70,70);
@@ -45,4 +46,5 @@ function draw() {
   log4.display();
   log5.display();
   birde.display();
+  plat.display();
   }
