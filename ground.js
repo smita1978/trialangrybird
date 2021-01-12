@@ -1,8 +1,8 @@
 class Ground{
-    constructor(){
-        this.body=Bodies.rectangle(600,600,1200,20,{isStatic:true});
-        this.width=1200;
-        this.height=20;
+    constructor(x,y,w,h){
+        this.body=Bodies.rectangle(x,y,w,h,{isStatic:true});
+        this.width=w;
+        this.height=h;
         World .add(world,this.body);
     }
     display(){
